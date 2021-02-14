@@ -85,6 +85,8 @@ if args.proxy:
     }
 
 
+
+
 @lru_cache(maxsize=None)
 def crack(TARGET:str, WORDLIST:str, METH:str='GET', ):
     """[summary]
@@ -149,9 +151,12 @@ def crack(TARGET:str, WORDLIST:str, METH:str='GET', ):
     if ANOM : print('ANOMALIES TO INVESTIGATE :', ANOM)
     if ALLIES : print('POSSIBLY WORKING CREDS :', ALLIES)
 
-print(args)
+        
 
+
+print(args)
 threads = []
+
 if __name__ == "__main__":
     import threading
     for _ in range(args.threads):
