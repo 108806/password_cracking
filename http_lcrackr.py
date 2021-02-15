@@ -71,7 +71,7 @@ target 		= 		args.target
 meth		=		args.method
 _SEP_		=		args.separator
 _THREADS_	=		args.threads
-debug       =       args.no_debug
+debug       	=       args.no_debug
 
 proxyDict = {}
 if args.proxy:
