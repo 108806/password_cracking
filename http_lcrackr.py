@@ -6,8 +6,8 @@ from requests.sessions import default_headers
 from functools import lru_cache
 
 
-__ver__ 	= 0.1
-__author__ 	= 0x1a906
+__ver__ 	= 	0.1
+__author__ 	= 	0x1a906
 
 __DOC__ ="""
 Simple http login bruteforcer using requests.auth method.
@@ -15,7 +15,7 @@ Simple http login bruteforcer using requests.auth method.
 EXAMPLE USAGE:
 
 $python3 login_crackr.py \n
-	-t	http://10.129.1.110:8080/manager/html \
+	-t http://10.129.1.110:8080/manager/html \
     -w SecLists/Passwords/Default-Credentials/ALL.txt \
     --sep : --threads 8 --debug False \
     --proxy 127.0.0.1:8080
