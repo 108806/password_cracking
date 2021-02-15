@@ -56,7 +56,7 @@ parser.add_argument('--method', '-m',
 				default='GET',
 				help='HTTP method to use on auth, default is GET')
 
-parser.add_argument('--debug','-d',
+parser.add_argument('--no_debug','-n',
 				default=True,
 				action='store_false',
 				help='Set False if you dont want to print all attempts.')
@@ -71,6 +71,7 @@ target 		= 		args.target
 meth		=		args.method
 _SEP_		=		args.separator
 _THREADS_	=		args.threads
+debug       =       args.no_debug
 
 proxyDict = {}
 if args.proxy:
@@ -159,7 +160,7 @@ def crack(target:str, wordlist:str, method:str,  debug:bool=True):
 threads = []
 if __name__ == "__main__":
 	for _ in range(_THREADS_):
-		t = threading.Thread(target=crack(target, wordlist, meth))
+		t = threading.Thread(target=crack(target, wordlist, meth, debug))
 		t.start()
 		threads.append(t)
 
